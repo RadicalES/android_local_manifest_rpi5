@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote name="github" fetch="https://github.com/" />
+  <remote name="radicales" fetch="https://github.com/RadicalES/" />
 
   <!-- Raspberry Pi -->
   <project path="device/brcm/rpi4" name="raspberry-vanilla/android_device_brcm_rpi4" remote="github" revision="android-15.0" >
     <linkfile src="mkimg.sh" dest="rpi4-mkimg.sh" />
     <linkfile src="wrimg.sh" dest="rpi4-wrimg.sh" />
   </project>
-  <project path="device/brcm/rpi5" name="raspberry-vanilla/android_device_brcm_rpi5" remote="github" revision="android-15.0" >
+  <!-- RadicalES fork of raspberry-vanilla (whose android-15.0 is unmaintained): generic Pi 5 / CM5 board fixes -->
+  <project path="device/brcm/rpi5" name="android_device_brcm_rpi5" remote="radicales" revision="android-15.0" >
     <linkfile src="mkimg.sh" dest="rpi5-mkimg.sh" />
     <linkfile src="wrimg.sh" dest="rpi5-wrimg.sh" />
   </project>
