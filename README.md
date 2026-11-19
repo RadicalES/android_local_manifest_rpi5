@@ -1,3 +1,22 @@
+### RadicalES Pi 5 / CM5 manifest
+
+Fork of [raspberry-vanilla/android_local_manifest](https://github.com/raspberry-vanilla/android_local_manifest)
+(`android-15.0`, which upstream no longer maintains) for our Android platform's Pi line. Differences from
+upstream: `device/brcm/rpi5` comes from
+[RadicalES/android_device_brcm_rpi5](https://github.com/RadicalES/android_device_brcm_rpi5), and only
+`manifest_brcm_rpi.xml` is kept (repo reads every `.xml` here; the optional utilities and
+remove-projects manifests are dropped). Clone this repo as `.repo/local_manifests`:
+
+```
+repo init -u https://android.googlesource.com/platform/manifest -b android-15.0.0_r32
+git clone -b android-15.0 https://github.com/RadicalES/android_local_manifest_rpi5.git .repo/local_manifests
+repo sync
+```
+
+The upstream instructions follow.
+
+***
+
 ### Device specific configuration to build AOSP Android 15 for Raspberry Pi 4 and Raspberry Pi 5.
 
 ***
